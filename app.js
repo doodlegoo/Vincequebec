@@ -24,6 +24,19 @@ app.get("/cat", function (req, res) {
   res.send("Pussies");
 })
 
+app.get("/ejs", function (req, res) {
+  res.render("index.ejs",{sparta: "THIS IS SPARTA"});
+})
+
+app.get("/repeat/:word/:repet", function (req, res) {
+  var text = "";
+  for(var i =0 ; i<req.params.repet;i++){
+    text += (req.params.word).toUpperCase();
+    text += "   ";
+  }
+res.send(text+"   ");
+})
+
 app.get("*", function (req, res) {
   res.send("ERROR 404!");
 })

@@ -5,11 +5,13 @@
 var express = require("express");
 
 var port = 80;
-
 var app = express();
 
+app.use(express.static("public"));
+app.set("view engine", "ejs");
+
 app.get("/", function (req, res) {
-  res.send("HI THIS IS A HOMEPAGE");
+  res.render("home");
 })
 
 app.get("/speak/:animal", function (req, res) {
@@ -25,7 +27,7 @@ app.get("/cat", function (req, res) {
 })
 
 app.get("/ejs", function (req, res) {
-  res.render("index.ejs",{sparta: "THIS IS SPARTA"});
+  res.render("index",{sparta: "THIS IS SPARTA"});
 })
 
 app.get("/repeat/:word/:repet", function (req, res) {

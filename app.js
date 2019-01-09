@@ -43,12 +43,12 @@ res.send(text+"   ");
 app.get("/portfolio", function (req, res) {
   res.render("portfolio");
     
-})
+});
 
 app.get("*", function (req, res) {
   res.send("ERROR 404!");
-})
+});
 
 app.listen(port, function () {
-  console.log("Example app listening on "+port+"!");
+  console.log("Server working on "+port+"!");
 });

@@ -13,9 +13,9 @@ app.set("view engine", "ejs");
 app.get("/", function (req, res) {
   res.render("home");
 })
-
+/*
 app.get("/speak/:animal", function (req, res) {
-  res.send("The "+(req.params.animal).toUpperCase()+" says something");
+  res.send("The " + (req.params.animal).toUpperCase()+" says something");
 })
 
 app.get("/dog", function (req, res) {
@@ -23,7 +23,7 @@ app.get("/dog", function (req, res) {
 })
 
 app.get("/cat", function (req, res) {
-  res.send("Pussies");
+  res.send("");
 })
 
 app.get("/ejs", function (req, res) {
@@ -37,6 +37,12 @@ app.get("/repeat/:word/:repet", function (req, res) {
     text += "   ";
   }
 res.send(text+"   ");
+})
+*/
+
+app.get("/portfolio", function (req, res) {
+  res.render("portfolio");
+    
 })
 
 app.get("*", function (req, res) {

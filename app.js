@@ -18,7 +18,7 @@ app.get("/speak/:animal", function (req, res) {
   res.send("The " + (req.params.animal).toUpperCase()+" says something");
 })
 
-app.get("/dog", function (req, res) {
+app.get("/cv", function (req, res) {
   res.send("Doggies");
 })
 
